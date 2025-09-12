@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alejandro David Arzola Saavedra">
+    <meta name="description" content="Three.js and OpenGL Examples Repository">
+    <title>Three.js & OpenGL Examples</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 50%, #16213e 100%);
+            color: #f0f6fc;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #58a6ff, #79c0ff, #a5f3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .author-info {
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .category {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(88, 166, 255, 0.2);
+        }
+
+        .category h2 {
+            color: #58a6ff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-icon {
+            font-size: 1.5rem;
+        }
+
+        .example-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid #58a6ff;
+            transition: all 0.3s ease;
+        }
+
+        .example-item:hover {
+            background: rgba(255,255,255,0.1);
+            border-left-color: #79c0ff;
+        }
+
+        .example-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .example-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .example-features {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0;
+        }
+
+        .example-features li {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-bottom: 0.25rem;
+        }
+
+        .example-features li:before {
+            content: "→";
+            margin-right: 0.5rem;
+            color: #58a6ff;
+        }
+
+        .demo-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: linear-gradient(45deg, #238636, #2ea043);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #2ea043;
+        }
+
+        .demo-link:hover {
+            background: linear-gradient(45deg, #2ea043, #46954a);
+            box-shadow: 0 4px 12px rgba(46, 160, 67, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .github-link {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+
+        .github-link a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .github-link a:hover {
+            color: #79c0ff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Three.js & OpenGL Examples</h1>
+            <p class="subtitle">A collection of interactive computer graphics examples and projects</p>
+            <div class="author-info">
+                <p>Created by: <strong>Alejandro David Arzola Saavedra</strong></p>
+                <p>Universidad de Las Palmas de Gran Canaria - Computer Graphics 2024/25</p>
+            </div>
+        </header>
+
+        <div class="examples-grid">
+            <div class="category">
+                <h2><span class="category-icon">🎮</span> WebGL Basic Examples</h2>
+                <div class="example-item">
+                    <div class="example-title">Car Racing Game</div>
+                    <div class="example-description">
+                        An interactive 2D car racing game built with pure WebGL and custom shaders
+                    </div>
+                    <ul class="example-features">
+                        <li>Custom vertex and fragment shaders</li>
+                        <li>Real-time keyboard input handling</li>
+                        <li>Animated environment (clouds, trees, road)</li>
+                        <li>Pause/resume functionality</li>
+                        <li>Smooth car movement with boundaries</li>
+                    </ul>
+                    <a href="examples/webgl-basic/car-game.html" class="demo-link" target="_blank">
+                        🚗 Play Game
+                    </a>
+                </div>
+                
+                <div class="example-item">
+                    <div class="example-title">Spinning Triangle</div>
+                    <div class="example-description">
+                        A fundamental WebGL example demonstrating pure WebGL programming with custom shaders
+                    </div>
+                    <ul class="example-features">
+                        <li>Pure WebGL without external libraries</li>
+                        <li>Custom vertex and fragment shaders with rotation</li>
+                        <li>Interactive color mode switching</li>
+                        <li>Adjustable rotation speed</li>
+                        <li>RGB and rainbow color effects</li>
+                    </ul>
+                    <a href="examples/webgl-basic/spinning-triangle.html" class="demo-link" target="_blank">
+                        🔺 View Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2><span class="category-icon">📦</span> Three.js Examples</h2>
+                <div class="example-item">
+                    <div class="example-title">Rotating Cube</div>
+                    <div class="example-description">
+                        A basic Three.js example demonstrating 3D rendering, lighting, and interactive controls
+                    </div>
+                    <ul class="example-features">
+                        <li>Phong material with realistic lighting</li>
+                        <li>Shadow mapping and ambient lighting</li>
+                        <li>Orbit controls for camera manipulation</li>
+                        <li>Interactive color changing</li>
+                        <li>Wireframe toggle mode</li>
+                    </ul>
+                    <a href="examples/threejs-examples/rotating-cube.html" class="demo-link" target="_blank">
+                        🎯 View Demo
+                    </a>
+                </div>
+                
+                <div class="example-item">
+                    <div class="example-title">Geometric Shapes Gallery</div>
+                    <div class="example-description">
+                        Interactive showcase of various Three.js geometric primitives with animations
+                    </div>
+                    <ul class="example-features">
+                        <li>8 different geometric shapes (cube, sphere, torus, etc.)</li>
+                        <li>Adjustable animation speed controls</li>
+                        <li>Dynamic lighting and shadow effects</li>
+                        <li>Random color generation</li>
+                        <li>Unique animations per shape type</li>
+                    </ul>
+                    <a href="examples/threejs-examples/geometric-shapes.html" class="demo-link" target="_blank">
+                        🔷 View Shapes
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2><span class="category-icon">✨</span> Custom Shaders</h2>
+                <div class="example-item">
+                    <div class="example-title">Animated Shader Effects</div>
+                    <div class="example-description">
+                        Advanced shader programming with animated effects and multiple rendering modes
+                    </div>
+                    <ul class="example-features">
+                        <li>Custom GLSL vertex and fragment shaders</li>
+                        <li>Multiple animation modes (wave, spiral, grid)</li>
+                        <li>Real-time uniform updates</li>
+                        <li>HSV color space manipulation</li>
+                        <li>Procedural pattern generation</li>
+                    </ul>
+                    <a href="examples/shaders/custom-shaders.html" class="demo-link" target="_blank">
+                        🌈 View Shaders
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="github-link">
+            <p>
+                <a href="https://github.com/AlejandroDavidArzolaSaavedra/threejs" target="_blank">
+                    📚 View Source Code on GitHub
+                </a>
+            </p>
+            <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 1rem;">
+                All examples are open source and free to use for educational purposes
+            </p>
+        </div>
+    </div>
+</body>
+</html>
