@@ -30,9 +30,5 @@ Alejandro David Arzola Saavedra
 Universidad de Las Palmas de Gran Canaria  
 Computer Graphics Course 2024/25
 
-## Getting Started
-Simply clone this repository and open the HTML files in your web browser. No additional setup or dependencies required for basic examples.
-=======
-
 
 https://alejandrodavidarzolasaavedra.github.io/webgl/p1.html
