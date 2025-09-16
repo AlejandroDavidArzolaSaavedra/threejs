@@ -1,3 +1,3 @@
-# threejs
+# Webgl
 
-https://alejandrodavidarzolasaavedra.github.io/threejs/p1.html
+https://alejandrodavidarzolasaavedra.github.io/webgl/p1.html)
