@@ -1,11 +1,4 @@
-# Webgl
-
-https://alejandrodavidarzolasaavedra.github.io/webgl/p1.html
-
-
-
-<<<<<<< copilot/fix-39a47ed0-bec2-4c63-b1ac-8c492de40991
-# Three.js and OpenGL Examples
+# OpenGL Examples
 
 A repository containing examples and projects using Three.js and OpenGL for computer graphics development.
 
@@ -40,7 +33,6 @@ Computer Graphics Course 2024/25
 ## Getting Started
 Simply clone this repository and open the HTML files in your web browser. No additional setup or dependencies required for basic examples.
 =======
-# Webgl
+
 
 https://alejandrodavidarzolasaavedra.github.io/webgl/p1.html
->>>>>>> main
